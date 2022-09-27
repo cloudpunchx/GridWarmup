@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: #BCF4F5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#logo{
+    height: 100px;
+    border-radius: 100%;
+    margin: 25px;
+    justify-self: start;
+}
+
+#pageHeader{
+    display: grid;
+    grid-template-columns: 0.4fr 4fr 2fr;
+}
+
+/* adding negative - to text shadow will change the shadow placement */
+#pageHeader > h1{
+    justify-self: center;
+    align-self: center;
+    font-size: 3.5rem;
+    color: #CABAC8;
+    text-shadow: 2px 2px #885A89;
+}
+
+#pageHeader > nav{
+    justify-self: end;
+    align-self: center;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #885A89;
+    border: 5px #885A89 solid;
+    border-radius: 25%;
+    padding: 0.25rem;
+    margin: 10px;
+}
+
+/* when you are talking about children of a grid the parent of that child is the cell that it is assigned to
+essentially this repeat rule dictates what the max width is but we're saying here it can take up to
+100%, but there is no spacing as we said 100%, add column gap to get spacing */
+#mainSection > img{
+    max-width: 100%;
+    column-gap: 5vw;
+    row-gap: 5vh;
+}
+
+#mainSection{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+footer{
+    margin-top: 20vh;
+}
+
+footer > nav{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
