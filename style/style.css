@@ -34,6 +34,19 @@ html{
     align-self: center;
 }
 
+.posts img{
+    max-width: 100%;
+}
+
+.posts{
+    display: grid;
+    grid-auto-rows: min-content;
+}
+
+.posts > h3{
+    max-height: 7vh;
+}
+
 nav a{
     text-decoration: none;
     font-size: 1.5rem;

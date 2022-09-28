@@ -1,0 +1,56 @@
+/* start with mobile rules */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: #BCF4F5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#logo{
+    height: 100px;
+    border-radius: 100%;
+    margin: 25px;
+    justify-self: start;
+}
+
+#pageHeader{
+    display: grid;
+    grid-template-columns: 0.4fr 4fr 2fr;
+}
+
+/* display none - h1 in header */
+#pageHeader > h1{
+    display: none;
+    justify-self: center;
+    align-self: center;
+    font-size: 3.5rem;
+    color: #CABAC8;
+    text-shadow: 2px 2px #885A89;
+}
+
+#pageHeader > nav{
+    justify-self: end;
+    align-self: center;
+}
+
+/* Tablet media query */
+/* when you reach tablet size the display: initial will show the h1 again because
+earlier we said display:none */
+@media only screen and (min-width:600px) {
+    #logo{
+        height: 150px;
+    }
+    #pageHeader h1{
+        display: initial;
+    }
+}
+
+/* desktop media query */
+@media only screen and (min-width:1100px) {
+    #pageHeader > h1{
+        font-size: 4rem;
+    }
+}
